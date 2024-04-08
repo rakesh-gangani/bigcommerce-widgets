@@ -1,0 +1,49 @@
+<style>
+
+  .link-list-content {
+    --columns: 2;
+    --gap: 10px;
+    --gap-count: calc(var(--columns) - 1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap);
+  }
+  .link-list-content .link-item {
+    flex-basis: calc(
+      calc(100% / var(--columns)) -
+        calc(var(--gap) / var(--columns) * var(--gap-count))
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  @media screen and (min-width: 768px) {
+    .link-list .link-list-content {
+      --columns: 3;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .link-list .link-list-content {
+      --columns: 4;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .link-list .link-list-content {
+      --columns: 5;
+    }
+  } 
+</style>
+<div class="link-list">
+  <div class="link-list-content">
+    {{#each link-list}}
+    <div class="link-item">
+      <a href="{{url}}" class="button button--small card-figcaption-button"
+        >{{label}}</a
+      >
+    </div>
+    {{/each}}
+  </div>
+</div>

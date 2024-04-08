@@ -1,0 +1,37 @@
+[
+  {
+    "type": "array",
+    "label": "Lisk List",
+    "id": "link-list",
+    "defaultCount": 2,
+    "entryLabel": "Link",
+    "schema": [
+      {
+        "type": "tab",
+        "label": "Content",
+        "sections": [
+          {
+            "settings": [
+              {
+                "type": "input",
+                "label": "Label",
+                "id": "label",
+                "typeMeta": {
+                  "placeholder": "Enter Link Label "
+                }
+              },
+              {
+                "type": "input",
+                "label": "Url",
+                "id": "url",
+                "typeMeta": {
+                  "placeholder": "Enter Link URL"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
