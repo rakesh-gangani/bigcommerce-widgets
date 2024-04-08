@@ -1,0 +1,216 @@
+[
+  {
+    "type": "tab",
+    "label": "Title",
+    "sections": [
+      {
+        "label": "Title",
+        "settings": [
+          {
+            "type": "input",
+            "label": "label",
+            "id": "title",
+            "default": "Label"
+          }
+        ]
+      }
+    ]
+  }, 
+  {
+    "type": "tab",
+    "label": "Top Link List",
+    "sections": [
+      {
+        "label": "Top Link List",
+        "settings": [
+          {
+            "type": "input",
+            "label": "Link 1",
+            "id": "link-label-1",
+            "default": "Link Label"
+          },
+          {
+            "type": "input",
+            "label": "Url 1",
+            "id": "link-url-1",
+            "default": "#"
+          },
+          {
+            "type": "input",
+            "label": "Link 2",
+            "id": "link-label-2",
+            "default": "Link Label"
+          },
+          {
+            "type": "input",
+            "label": "Url 2",
+            "id": "link-url-2",
+            "default": "#"
+          },
+          {
+            "type": "input",
+            "label": "Link 3",
+            "id": "link-label-3",
+            "default": "Link Label"
+          },
+          {
+            "type": "input",
+            "label": "Url 3",
+            "id": "link-url-3",
+            "default": "#"
+          },
+          {
+            "type": "input",
+            "label": "Link 4",
+            "id": "link-label-4",
+            "default": "Link Label"
+          },
+          {
+            "type": "input",
+            "label": "Url 4",
+            "id": "link-url-4",
+            "default": "#"
+          },
+          {
+            "type": "input",
+            "label": "Link 5",
+            "id": "link-label-5",
+            "default": "Link Label"
+          },
+          {
+            "type": "input",
+            "label": "Url 5",
+            "id": "link-url-5",
+            "default": "#"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "tab",
+    "label": "Link",
+    "sections": [
+      {
+        "label": "Link",
+        "settings": [
+          {
+            "type": "code",
+            "label": "Html Code",
+            "id": "richtext-label-1",
+            "default": "<div></div>",
+            "typeMeta": {
+              "language": "html",
+              "placeholder": "Insert HTML code here"
+            }
+          }
+        ]
+      }
+    ]
+  }, 
+  {
+    "type": "hidden",
+    "settings": [
+      {
+        "type": "graphQl",
+        "id": "graphQueries",
+        "typeMeta": {
+          "mappings": {
+            "productIds": {
+              "reads": "product.value.*.productId",
+              "type": "Int!"
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "tab",
+    "label": "Content",
+    "sections": [
+      {
+        "label": "Products",
+        "settings": [
+          {
+            "type": "productSet",
+            "label": "Product Set",
+            "id": "product",
+            "entryLabel": "Product",
+            "default": {
+              "type": "manual",
+              "value": []
+            }
+          }
+        ],
+        "typeMeta": {
+          "type": "setSection"
+        }
+      }
+    ]
+  },
+  {
+    "type": "tab",
+    "label": "Products View More",
+    "sections": [
+      {
+        "label": "Products View More",
+        "settings": [
+          {
+            "type": "code",
+            "label": "View More HTML",
+            "id": "view_more_code",
+            "default": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "tab",
+    "label": "Bottom Action Button ",
+    "sections": [
+      {
+        "label": "Bottom Action Button ",
+        "settings": [
+          {
+            "type": "input",
+            "label": "Button label ",
+            "id": "button-label-1",
+            "default": "Button Label"
+          },
+          {
+            "type": "input",
+            "label": "Url",
+            "id": "button-url-1",
+            "default": "#"
+          },
+          {
+            "type": "input",
+            "label": "Button label",
+            "id": "button-label-2",
+            "default": "Button Label"
+          },
+          {
+            "type": "input",
+            "label": "Url",
+            "id": "button-url-2",
+            "default": "#"
+          },
+          {
+            "type": "input",
+            "label": "Button label",
+            "id": "button-label-3",
+            "default": "Button Label"
+          },
+          {
+            "type": "input",
+            "label": "Url",
+            "id": "button-url-3",
+            "default": "#"
+          }
+        ]
+      }
+    ]
+  }
+]

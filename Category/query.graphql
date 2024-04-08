@@ -1,0 +1,75 @@
+query ProductSet($productIds: [Int!], $activeCurrencyCode: currencyCode!) {
+  site {
+    currency(currencyCode: $activeCurrencyCode) {
+      display {
+        symbol
+        symbolPlacement
+        decimalToken
+        decimalPlaces
+        thousandsToken
+      }
+    }
+    products(entityIds: $productIds) {
+      edges {
+        node {
+          brand {
+            name
+            path
+          }
+          name
+          id:entityId
+          addToCartUrl
+          addToWishlistUrl
+          path
+          sku
+          productOptions{
+              edges{
+              node{
+                  entityId
+              }
+            }
+          }
+          priceWithTax: prices(
+            includeTax: true
+            currencyCode: $activeCurrencyCode
+          ) {
+            basePrice{
+              currencyCode
+              value
+            }
+            price {
+              currencyCode
+              value
+            }
+          }
+          priceWithoutTax: prices(
+            includeTax: false
+            currencyCode: $activeCurrencyCode
+          ) {
+            basePrice{
+              currencyCode
+              value
+            }
+            price {
+              currencyCode
+              value
+            }
+          }
+          defaultImage {
+            url320wide: url(width: 320)
+            altText
+          }
+          images(first: 2) {
+            edges {
+              node {
+                url(width: 320)
+                altText
+                isDefault
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
